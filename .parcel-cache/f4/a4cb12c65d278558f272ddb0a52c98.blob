@@ -1,0 +1,17 @@
+body {
+  color: rgba(0, 0, 0, 0.4);
+  background-color: grey;
+}
+body header {
+  background-color: color_primary;
+  height: 10%;
+}
+body section {
+  height: 85%;
+}
+body footer {
+  height: 5%;
+  background-color: white;
+}
+
+/*# sourceMappingURL=output.css.map */

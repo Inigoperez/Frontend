@@ -1,0 +1,29 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production parcel build index1.html --dist-dir dist --no-source-maps ",
+    "build-yarn": "yarn js && yarn sass",
+    "prebuild": "rm -fr .parcel-cache dist || exit 0",
+    "prebuild-yarn": "rm -rv dist",
+    "prestart": "rm -fr .parcel-cache dist",
+    "start": "cross-env NODE_ENV=development parcel index.html --dist-dir dist --no-autoinstall --no-source-maps",
+    "sass": "sass input.scss dist/output.css",
+    "presass": "echo vamos a compilar el proyecto",
+    "js": "babel . --ignore node_module --out-dir dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "leaflet": "^1.7.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "parcel": "^2.0.0-nightly.453",
+    "sass": "^1.29.0"
+  },
+  "alias":{
+    "leaflet": { "global": "L" }
+  }
+}
